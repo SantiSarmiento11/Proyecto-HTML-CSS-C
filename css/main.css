@@ -1,0 +1,59 @@
+:root {
+    /* === COLORES (de la imagen Mainstream) === */
+    --primary-blue: #125cf0;     /* Azul principal UI */
+    --dark-blue: #0e57eb;        /* Azul oscuro hover */
+    --light-blue: #125ae8;       /* Azul claro acentos */
+  
+    --bg-dark: #0a0a0a;          /* Fondo negro principal */
+    --surface-dark: #121212;     /* Cards y superficies */
+    --surface-card: #1a1a1a;     /* Cards secundarias */
+  
+    --accent-orange: #ff9500;    /* Botón "Buy Now" */
+    --accent-yellow: #ffd200;    /* Gradientes álbum */
+    --accent-purple: #7c3aed;    /* Posible para playlists */
+  
+    --text-primary: #ffffff;     /* Texto principal */
+    --text-secondary: #b3b3b3;   /* Texto secundario */
+    --text-muted: #666666;       /* Labels pequeños */
+    --text-accent: #ff9500;      /* Precios */
+  
+    --border-default: #333333;   /* Bordes cards */
+    --border-hover: #125cf0;     /* Bordes interactivos */
+  
+    /* === FUENTES === */
+    --font-primary: 'Inter', system-ui, sans-serif;
+    --font-secondary: 'SF Pro Display', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Roboto Mono', monospace;
+  
+    /* === ESPACIADO (escala 4px) === */
+    --space-xs: 0.25rem;  /* 4px */
+    --space-sm: 0.5rem;   /* 8px */
+    --space-md: 1rem;     /* 16px */
+    --space-lg: 1.5rem;   /* 24px */
+    --space-xl: 2rem;     /* 32px */
+    --space-2xl: 3rem;    /* 48px */
+  
+    /* === TIPOGRAFÍA (escala modular 1.25) === */
+    --font-size-xs: 0.75rem;   /* 12px */
+    --font-size-sm: 0.875rem;  /* 14px */
+    --font-size-base: 1rem;    /* 16px */
+    --font-size-lg: 1.125rem;  /* 18px */
+    --font-size-xl: 1.25rem;   /* 20px */
+    --font-size-2xl: 1.5rem;   /* 24px */
+    --font-size-3xl: 2rem;     /* 32px */
+    --font-size-4xl: 3rem;     /* 48px */
+  
+    /* === EFECTOS === */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+  
+    /* === TRANSICIONES === */
+    --transition-fast: all 0.15s ease;
+    --transition-normal: all 0.25s ease;
+    --transition-slow: all 0.4s ease;
+}
+  
