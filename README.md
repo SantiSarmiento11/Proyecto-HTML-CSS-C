@@ -54,7 +54,7 @@ Lista de álbumes seleccionados con controles de cantidad, precio unitario y opc
 Formulario de pago seguro dividido en dos secciones: método de pago (tarjeta de crédito con campos de número, expiración, CVC y nombre) y dirección de facturación. Resumen de orden en sidebar con los productos a pagar y botón de confirmación.
 
 ### Confirmación — success.html
-Mensaje de compra exitosa con resumen de la transacción y número de orden. Sidebar de biblioteca personal con accesos a Compras Recientes, Mis Álbumes y Canciones Favoritas.
+Mensaje de compra exitosa con resumen de la transacción y número de orden. Sidebar de biblioteca personal con accesos a Compras Recientes, Mis Álbumes y Canciones Favoritas permitiendo al usuario un avance en su experiencia.
 
 ---
 
