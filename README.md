@@ -176,6 +176,25 @@ Todos los mensajes de commit siguen el estándar Conventional Commits:
 Ejemplo: `feat: agregar vista de detalle de álbum con tracklist`
 
 ---
+## Posibles Mejores Futuras
+Future Improvements
+
+- Integración con API de música
+- Reproductor funcional con JavaScript
+- Sistema de autenticación de usuarios
+- Sistema de playlists personalizadas
+- Historial de reproducción
+- Sistema de favoritos
+- Búsqueda dinámica
+- Integración con pasarela de pagos
+
+## Diagramas visuales
+            Header
+              │
+Sidebar ───── Main ───── Player
+              │
+          Components
+
 
 ## Metodología de Ramas y créditos
 
