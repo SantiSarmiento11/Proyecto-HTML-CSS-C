@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MusicStream — Store</title>
+
+  <!-- Fuentes de Google: Inter (texto normal) y Space Grotesk (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilo del proyecto -->
+  <link rel="stylesheet" href="css/main.css" />       <!-- Variables globales y reset -->
+  <link rel="stylesheet" href="css/layout.css" />     <!-- Estructura grid: header, sidebar, main -->
+  <link rel="stylesheet" href="css/components.css" /> <!-- Botones, tarjetas y secciones -->
+  <link rel="stylesheet" href="css/views/store.css" /><!-- Estilos especificos de esta pagina -->
+</head>
+
+<body>
+  <!-- Contenedor principal: organiza header + sidebar + main en un grid -->
+  <div class="app">
+
+    <!-- =============================================
+         HEADER - barra superior fija
+         Contiene: logo, navegacion, busqueda y avatar
+    ============================================= -->
+    <header class="header" role="banner">
+
+      <!-- Logo con enlace a la pagina de inicio -->
+      <a href="index.html" class="header__logo" aria-label="MusicStream Home">
+        <img width="30" src="./assets/icons/34.png" class="header__logo-icon" aria-hidden="true">
+        <span class="header__logo-text">White A-Music</span>
+      </a>
+
+      <!-- Navegacion principal del sitio -->
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="#" class="header__nav-link">Discover</a>
+        <a href="#" class="header__nav-link">Library</a>
+        <!-- La clase --active marca la pagina actual con un subrayado azul -->
+        <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">Store</a>
+      </nav>
+
+      <!-- Buscador de artistas, albumes y canciones -->
+      <div class="header__search" role="search">
+        <!-- Icono lupa -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="header__search-icon">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="search" placeholder="Artists, albums, tracks" aria-label="Search artists, albums, tracks" />
+      </div>
+
+      <!-- Foto de perfil del usuario -->
+      <a href="#" class="header__avatar" aria-label="User profile">
+        <img src="./assets/img/WhatsApp Image 2026-03-08 at 6.40.15 PM.jpeg" alt="User avatar" width="34" height="34" loading="lazy" />
+      </a>
+    </header>
+
+    <!-- =============================================
+         SIDEBAR - menu lateral con categorias
+    ============================================= -->
+    <aside class="sidebar" role="complementary" aria-label="Store categories">
+      <p class="sidebar__label">Categories</p>
+
+      <nav class="sidebar__nav" aria-label="Category navigation">
+
+        <!-- New Releases: pagina activa, fondo azul -->
+        <a href="#" class="sidebar__nav-item sidebar__nav-item--active" aria-current="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          New Releases
+        </a>
+
+        <!-- Genres: cuadricula de cuatro cuadrados -->
+        <a href="#" class="sidebar__nav-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3"  y="3"  width="7" height="7"/>
+            <rect x="14" y="3"  width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3"  y="14" width="7" height="7"/>
+          </svg>
+          Genres
+        </a>
+
+        <!-- Top Charts: flecha subiendo (grafico) -->
+        <a href="#" class="sidebar__nav-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+            <polyline points="17 6 23 6 23 12"/>
+          </svg>
+          Top Charts
+        </a>
+
+        <!-- Artists: silueta de persona -->
+        <a href="#" class="sidebar__nav-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          Artists
+        </a>
+
+      </nav>
+    </aside>
+
+    <!-- =============================================
+         MAIN - contenido principal de la tienda
+    ============================================= -->
+    <main class="main" id="main-content">
+      <div class="main__inner">
+
+        <!-- -----------------------------------------
+             HERO BANNER - destacado del editor
+             Imagen de fondo con texto encima
+        ----------------------------------------- -->
+        <section class="hero" aria-label="Editor's Pick">
+          <!-- Imagen de fondo, aria-hidden porque es decorativa -->
+          <div class="hero__bg" aria-hidden="true">
+            <img src="./assets/img/beautiful-tropical-beach-landscape-banner-white-sand-and-coco-palms-wide-panorama-background-concept-amazing-beach-scene-use-for-summer-vacation-and-exotic-holiday-luxury-travel-.jpg" alt="" width="1300" height="300" />
+          </div>
+          <!-- Texto y boton sobre la imagen -->
+          <div class="hero__content">
+            <p class="hero__eyebrow">Editor's Pick</p>
+            <h1 class="hero__title">The new album from Solar Flare</h1>
+            <a href="album-detail.html" class="hero__btn">Buy Now — $14.99</a>
+          </div>
+        </section>
+
+        <!-- -----------------------------------------
+             SECCION: Nuevos albumes de la semana
+             Grid de 4 tarjetas con portada y precio
+        ----------------------------------------- -->
+        <section class="section" aria-labelledby="albums-title">
+          <div class="section-header">
+            <h2 class="section-header__title" id="albums-title">New Albums This Week</h2>
+            <a href="#" class="section-header__link">See all</a>
+          </div>
+
+          <div class="albums-grid">
+
+            <!-- Album 1: La vida del artista -->
+            <a href="album-detail.html" class="card album-card">
+              <div class="card__artwork">
+                <img src="./assets/img/2.jpg" alt="La vida del artista album artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">La vida del artista</h3>
+                <p class="card__artist">Diomedes Diaz</p>
+                <span class="btn btn--price">$5.45</span>
+              </div>
+            </a>
+
+            <!-- Album 2: La voz -->
+            <a href="album-detail.html" class="card album-card">
+              <div class="card__artwork">
+                <img src="./assets/img/Gemini_Generated_Image_725py9725py9725p.png" alt="La voz album artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">La voz</h3>
+                <p class="card__artist">Diomedes Diaz</p>
+                <span class="btn btn--price">$12.99</span>
+              </div>
+            </a>
+
+            <!-- Album 3: De nuevo con mi gente -->
+            <a href="album-detail.html" class="card album-card">
+              <div class="card__artwork">
+                <img src="./assets/img/10.avif" alt="De nuevo con mi gente album artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">De nuevo con mi gente</h3>
+                <p class="card__artist">Diomedes Diaz</p>
+                <span class="btn btn--price">$20.52</span>
+              </div>
+            </a>
+
+            <!-- Album 4: El ultimo baile -->
+            <a href="album-detail.html" class="card album-card">
+              <div class="card__artwork">
+                <img src="./assets/img/5.jpg" alt="El ultimo baile album artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">El ultimo baile</h3>
+                <p class="card__artist">Silvestre Dangond</p>
+                <span class="btn btn--price">$7.99</span>
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- -----------------------------------------
+             SECCION: Canciones mas vendidas
+             Grid de 4 tarjetas de tracks individuales
+        ----------------------------------------- -->
+        <section class="section" aria-labelledby="tracks-title">
+          <div class="section-header">
+            <h2 class="section-header__title" id="tracks-title">Top Selling Tracks</h2>
+            <a href="#" class="section-header__link">See all</a>
+          </div>
+
+          <div class="tracks-grid">
+
+            <!-- Track 1: El original -->
+            <a href="album-detail.html" class="card track-card">
+              <div class="card__artwork">
+                <img src="./assets/img/6.avif" alt="El original track artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">El original</h3>
+                <p class="card__artist">Silvestre Dangond</p>
+                <span class="btn btn--price">$4.99</span>
+              </div>
+            </a>
+
+            <!-- Track 2: Intruso -->
+            <a href="album-detail.html" class="card track-card">
+              <div class="card__artwork">
+                <img src="./assets/img/7.jpg" alt="Intruso track artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Intruso</h3>
+                <p class="card__artist">Silvestre Dangond</p>
+                <span class="btn btn--price">$0.10</span>
+              </div>
+            </a>
+
+            <!-- Track 3: El ultimo baile -->
+            <a href="album-detail.html" class="card track-card">
+              <div class="card__artwork">
+                <img src="./assets/img/donomarbig.jpg" alt="El ultimo baile track artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">El ultimo baile</h3>
+                <p class="card__artist">Silvestre Dangond</p>
+                <span class="btn btn--price">$8.73</span>
+              </div>
+            </a>
+
+            <!-- Track 4: Ponte a la moda -->
+            <a href="album-detail.html" class="card track-card">
+              <div class="card__artwork">
+                <img src="./assets/img/bf4de96be54a0a5b1b9c0ae16b8a9505.jpg" alt="Ponte a la moda track artwork" loading="lazy" />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Ponte a la moda</h3>
+                <p class="card__artist">Silvestre Dangond</p>
+                <span class="btn btn--price">$5.29</span>
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div><!-- fin .app -->
+</body>
+</html>
