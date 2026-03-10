@@ -1,0 +1,164 @@
+/* ============================================
+   store.css — Hero Banner · Albums · Tracks
+   ============================================ */
+
+/* ─── Hero Banner ─────────────────────────────── */
+.hero {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 260px;
+  margin-bottom: var(--space-2xl);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-xl) var(--space-2xl);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url(../../assets/img/4.jpg);
+  z-index: 0;
+}
+
+.hero__bg::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 15, 25, 0.85) 0%,
+    rgba(10, 15, 25, 0.2) 50%,
+    transparent 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-display);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: var(--space-lg);
+  max-width: 500px;
+  line-height: 1.2;
+}
+
+.hero__btn {
+  background: var(--accent-primary);
+  color: #ffffff;
+  padding: 12px var(--space-xl);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  transition: all var(--transition);
+  box-shadow: 0 4px 20px rgba(45, 108, 223, 0.5);
+}
+
+.hero__btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(45, 108, 223, 0.65);
+}
+
+/* ─── Albums Grid ─────────────────────────────── */
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+/* ─── Tracks Grid ─────────────────────────────── */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+/* ─── Store Page: album/track artwork overrides ── */
+.album-card .card__artwork,
+.track-card .card__artwork {
+  border-radius: 0;
+}
+
+.artwork-echoes {
+  background: linear-gradient(160deg, #b8c5d6 0%, #7a9bb5 40%, #e8b88a 100%);
+}
+.artwork-midnight {
+  background: linear-gradient(160deg, #f5f0e8 0%, #e8e0d0 100%);
+}
+.artwork-citylights {
+  background: linear-gradient(160deg, #f0ebe0 0%, #d4c8b0 100%);
+}
+.artwork-lost {
+  background: linear-gradient(160deg, #a8d4d4 0%, #6ab8c8 40%, #3a9aaa 100%);
+}
+.artwork-starlight {
+  background: linear-gradient(160deg, #c8d8e8 0%, #8ab0c8 40%, #5a9ab0 100%);
+}
+.artwork-ocean {
+  background: linear-gradient(160deg, #1a7a6a 0%, #2a9a8a 50%, #3ab0a0 100%);
+}
+.artwork-firefly {
+  background: linear-gradient(160deg, #e88a5a 0%, #c85a3a 50%, #2a3a5a 100%);
+}
+.artwork-rushhour {
+  background: linear-gradient(160deg, #1a2a3a 0%, #2a3a4a 50%, #3a5a5a 100%);
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Responsive ──────────────────────────────── */
+@media (max-width: 1100px) {
+  .albums-grid,
+  .tracks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .albums-grid,
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    height: 200px;
+    padding: var(--space-lg);
+  }
+}
