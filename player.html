@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echoes in the Void — MusicStream Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/views/player.css" />
+</head>
+
+<body class="player-page">
+
+  <!-- HEADER -->
+  <header class="player-header" role="banner">
+    <a href="index.html" class="player-header__logo" aria-label="MusicStream Home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="6" width="3" height="12" rx="1.5" fill="#3b82f6"/>
+        <rect x="7" y="3" width="3" height="18" rx="1.5" fill="#3b82f6"/>
+        <rect x="12" y="1" width="3" height="22" rx="1.5" fill="#3b82f6"/>
+        <rect x="17" y="5" width="3" height="14" rx="1.5" fill="#3b82f6"/>
+      </svg>
+      <span>MusicStream</span>
+    </a>
+
+    <div class="player-header__search" role="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="search" placeholder="Search" aria-label="Search" />
+    </div>
+
+    <nav class="player-header__nav" aria-label="Main navigation">
+      <a href="index.html" class="player-header__nav-link">Home</a>
+      <a href="#" class="player-header__nav-link">Browse</a>
+      <a href="#" class="player-header__nav-link">Library</a>
+      <a href="index.html" class="player-header__nav-link">Store</a>
+    </nav>
+
+    <div class="player-header__right">
+      <a href="#" class="player-header__icon-btn" aria-label="Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+      </a>
+      <a href="#" class="player-header__avatar" aria-label="User profile">
+        <img src="./assets/img/WhatsApp Image 2026-03-08 at 6.40.15 PM.jpeg" alt="User avatar" width="34" height="34" loading="lazy" />
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN: artwork + Up Next -->
+  <main class="player-content" id="main-content">
+
+    <!-- Columna izquierda: arte + info + barra -->
+    <section class="player-main-col" aria-label="Now playing">
+
+      <div class="player-artwork-card">
+        <div class="player-artwork">
+          <img src="./assets/img/Diomedes Días.jpg" alt="Echoes in the Void album cover" width="420" height="420" loading="eager" />
+        </div>
+      </div>
+
+      <div class="player-song-info">
+        <div class="player-song-title-row">
+          <h1 class="player-song-title">Echoes in the Void</h1>
+          <button class="player-like-btn" aria-label="Like this song">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+        </div>
+        <p class="player-song-artist">Starlight Symphony</p>
+        <p class="player-song-album">Cosmic Waves</p>
+      </div>
+
+      <div class="player-progress-section">
+        <div class="player-progress-bar" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+          <div class="player-progress-fill" style="width: 34%"></div>
+          <div class="player-progress-thumb" style="left: 34%"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Columna derecha: Up Next -->
+    <aside class="player-queue" aria-label="Up next queue">
+      <h2 class="player-queue__title">Up Next</h2>
+
+      <ol class="player-queue__list">
+        <li class="player-queue__item">
+          <div class="player-queue__thumb">
+            <img src="./assets/img/2.jpg" alt="Neon Dreams cover" width="52" height="52" loading="lazy" />
+          </div>
+          <div class="player-queue__info">
+            <span class="player-queue__track-title">Neon Dreams</span>
+            <span class="player-queue__track-artist">Synthwave Rider</span>
+          </div>
+          <span class="player-queue__duration">3:45</span>
+        </li>
+
+        <li class="player-queue__item">
+          <div class="player-queue__thumb">
+            <img src="./assets/img/3.jpg" alt="Lost in Translation cover" width="52" height="52" loading="lazy" />
+          </div>
+          <div class="player-queue__info">
+            <span class="player-queue__track-title">Lost in Translation</span>
+            <span class="player-queue__track-artist">The Vowels</span>
+          </div>
+          <span class="player-queue__duration">4:12</span>
+        </li>
+
+        <li class="player-queue__item">
+          <div class="player-queue__thumb">
+            <img src="./assets/img/5.jpg" alt="City Lights cover" width="52" height="52" loading="lazy" />
+          </div>
+          <div class="player-queue__info">
+            <span class="player-queue__track-title">City Lights</span>
+            <span class="player-queue__track-artist">Urban Explorer</span>
+          </div>
+          <span class="player-queue__duration">2:58</span>
+        </li>
+
+        <li class="player-queue__item">
+          <div class="player-queue__thumb">
+            <img src="./assets/img/7.jpg" alt="Ocean Drive cover" width="52" height="52" loading="lazy" />
+          </div>
+          <div class="player-queue__info">
+            <span class="player-queue__track-title">Ocean Drive</span>
+            <span class="player-queue__track-artist">Summer Haze</span>
+          </div>
+          <span class="player-queue__duration">3:30</span>
+        </li>
+      </ol>
+    </aside>
+
+  </main>
+
+  <!-- PLAYER BAR fijo -->
+  <footer class="player-bar" role="region" aria-label="Player controls">
+
+    <div class="player-bar__track">
+      <div class="player-bar__thumb">
+        <img src="./assets/img/Diomedes Días.jpg" alt="Now playing thumbnail" width="44" height="44" />
+      </div>
+      <div class="player-bar__track-info">
+        <span class="player-bar__track-title">Echoes in the Void</span>
+        <span class="player-bar__track-artist">Starlight Symphony</span>
+      </div>
+      <button class="player-bar__like" aria-label="Like">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="player-bar__center">
+      <div class="player-bar__controls">
+        <button class="player-bar__ctrl-btn" aria-label="Shuffle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
+            <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+          </svg>
+        </button>
+        <button class="player-bar__ctrl-btn" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/>
+          </svg>
+        </button>
+        <button class="player-bar__play" aria-label="Pause">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+          </svg>
+        </button>
+        <button class="player-bar__ctrl-btn" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/>
+          </svg>
+        </button>
+        <button class="player-bar__ctrl-btn" aria-label="Repeat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+            <polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="player-bar__progress-wrap">
+        <span class="player-bar__time">1:21</span>
+        <div class="player-bar__progress" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+          <div class="player-bar__progress-fill" style="width: 34%"></div>
+        </div>
+        <span class="player-bar__time">3:56</span>
+      </div>
+    </div>
+
+    <div class="player-bar__right">
+      <button class="player-bar__ctrl-btn" aria-label="Volume">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+      </button>
+      <div class="player-bar__vol-track">
+        <div class="player-bar__vol-fill" style="width: 70%"></div>
+      </div>
+      <button class="player-bar__ctrl-btn" aria-label="Fullscreen">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+        </svg>
+      </button>
+    </div>
+
+  </footer>
+
+</body>
+</html>
