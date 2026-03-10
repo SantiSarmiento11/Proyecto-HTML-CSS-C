@@ -1,0 +1,267 @@
+/* ============================================================
+   layout.css — Estructura de la pagina principal
+   
+   Define el grid principal (header + sidebar + main),
+   los estilos del header, sidebar y contenedor del main.
+   ============================================================ */
+
+
+/* ─── APP SHELL ──────────────────────────────────────────────
+   Contenedor raiz con grid de 2 columnas y 2 filas:
+   
+   [ header  | header  ]
+   [ sidebar | main    ]
+   
+   ──────────────────────────────────────────────────────────── */
+.app {
+  display: grid;
+  /* Fila 1: altura fija del header / Fila 2: ocupa el resto */
+  grid-template-rows: var(--header-height) 1fr;
+  /* Columna 1: sidebar fijo / Columna 2: el resto */
+  grid-template-columns: var(--sidebar-width) 1fr;
+  /* Nombres de area para cada celda del grid */
+  grid-template-areas:
+    "header  header"
+    "sidebar main";
+  height: 100vh;     /* ocupa toda la pantalla */
+  overflow: hidden;  /* evita doble scroll */
+}
+
+
+/* ─── HEADER ─────────────────────────────────────────────────
+   Barra superior fija con logo, nav, busqueda y avatar
+   ──────────────────────────────────────────────────────────── */
+.header {
+  grid-area: header; /* ocupa el area "header" del grid */
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: 0 var(--space-xl);
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--border-subtle);
+  /* Sticky: se queda fija al hacer scroll */
+  position: sticky;
+  top: 0;
+  z-index: 100; /* encima del contenido */
+}
+
+/* Contenedor del logo: icono + texto */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+  min-width: 160px; /* evita que se comprima */
+}
+
+.header__logo-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: var(--accent-primary);
+}
+
+.header__logo-text {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap; /* no parte el texto en varias lineas */
+}
+
+/* Navegacion con enlaces centrados */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  flex: 1; /* ocupa el espacio disponible */
+}
+
+/* Estilo base de cada enlace del nav */
+.header__nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  white-space: nowrap;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.header__nav-link:hover {
+  color: var(--text-primary);
+}
+
+/* Enlace de la pagina actual: texto blanco y subrayado azul */
+.header__nav-link--active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Linea azul debajo del enlace activo */
+.header__nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Campo de busqueda con icono de lupa */
+.header__search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full); /* forma de capsula */
+  padding: var(--space-sm) var(--space-md);
+  width: 220px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+/* Cuando el input dentro esta activo, resalta el borde */
+.header__search:focus-within {
+  border-color: var(--accent-primary);
+  background: var(--bg-overlay);
+}
+
+.header__search-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.header__search input {
+  flex: 1;
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+}
+
+.header__search input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Avatar del usuario: imagen circular */
+.header__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  overflow: hidden;    /* recorta la imagen en circulo */
+  flex-shrink: 0;
+  border: 2px solid var(--border-card);
+  transition: border-color var(--transition);
+  cursor: pointer;
+}
+
+.header__avatar:hover {
+  border-color: var(--accent-primary); /* borde azul en hover */
+}
+
+.header__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta sin deformar la imagen */
+}
+
+
+/* ─── SIDEBAR ────────────────────────────────────────────────
+   Menu lateral izquierdo con categorias navegables
+   ──────────────────────────────────────────────────────────── */
+.sidebar {
+  grid-area: sidebar; /* ocupa el area "sidebar" del grid */
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--bg-base);
+  border-right: 1px solid var(--border-subtle);
+  overflow-y: auto; /* scroll interno si hay muchos items */
+  height: 100%;
+}
+
+/* Etiqueta de seccion en mayusculas (ej: "CATEGORIES") */
+.sidebar__label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em; /* espaciado de letras para mayusculas */
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  padding: 0 var(--space-sm);
+}
+
+/* Lista vertical de items de navegacion */
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* Cada enlace del sidebar: icono + texto */
+.sidebar__nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+  text-decoration: none;
+}
+
+.sidebar__nav-item:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+/* Item activo: fondo azul solido */
+.sidebar__nav-item--active {
+  color: var(--text-primary);
+  background: var(--accent-primary);
+}
+
+.sidebar__nav-item--active:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+
+/* ─── MAIN CONTENT ───────────────────────────────────────────
+   Area de contenido principal, con scroll propio
+   ──────────────────────────────────────────────────────────── */
+.main {
+  grid-area: main; /* ocupa el area "main" del grid */
+  overflow-y: auto;   /* permite hacer scroll solo en esta area */
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Contenedor interno con padding y ancho maximo */
+.main__inner {
+  padding: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto; /* centra el contenido */
+}
+
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────
+   En pantallas pequeñas (< 800px) se oculta el sidebar
+   y el grid pasa a una sola columna
+   ──────────────────────────────────────────────────────────── */
+@media (max-width: 800px) {
+  .app {
+    /* Una sola columna: solo header y main */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  /* El sidebar desaparece en movil */
+  .sidebar {
+    display: none;
+  }
+}
