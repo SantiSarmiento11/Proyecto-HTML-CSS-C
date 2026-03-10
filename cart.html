@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — MusicStream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/views/checkout.css" />
+</head>
+
+<body class="checkout-page">
+
+  <!-- HEADER -->
+  <header class="header--full" role="banner">
+    <a href="index.html" class="header__logo" aria-label="MusicStream Home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="6" width="3" height="12" rx="1.5" fill="#3b82f6"/>
+        <rect x="7" y="3" width="3" height="18" rx="1.5" fill="#3b82f6"/>
+        <rect x="12" y="1" width="3" height="22" rx="1.5" fill="#3b82f6"/>
+        <rect x="17" y="5" width="3" height="14" rx="1.5" fill="#3b82f6"/>
+      </svg>
+      <span class="header__logo-text">MusicStream</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html" class="header__nav-link">Home</a>
+      <a href="#" class="header__nav-link">Discover</a>
+      <a href="#" class="header__nav-link">Library</a>
+      <a href="index.html" class="header__nav-link header__nav-link--active">Store</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="cart.html" class="header__cart-icon-btn" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" class="breadcrumb__link">Store</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current" aria-current="page">Your Cart</span>
+    </nav>
+
+    <h1 class="page-title">Your Cart</h1>
+
+    <!-- Layout: items + resumen -->
+    <div class="checkout-layout">
+
+      <!-- Items -->
+      <section aria-label="Cart items">
+        <div class="cart-items">
+
+          <article class="cart-item">
+            <div class="cart-item__thumb">
+              <img src="./assets/img/2.jpg" alt="Currents album artwork" width="72" height="72" loading="lazy" />
+            </div>
+            <div class="cart-item__info">
+              <p class="cart-item__title">Currents</p>
+              <p class="cart-item__artist">Tame Impala</p>
+              <p class="cart-item__format">FLAC</p>
+            </div>
+            <div class="cart-item__qty" aria-label="Quantity">
+              <button class="cart-item__qty-btn" type="button" aria-label="Decrease quantity">&minus;</button>
+              <span class="cart-item__qty-num">1</span>
+              <button class="cart-item__qty-btn" type="button" aria-label="Increase quantity">+</button>
+            </div>
+            <span class="cart-item__price">$12.99</span>
+            <button class="cart-item__delete" type="button" aria-label="Remove Currents from cart">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                <path d="M10 11v6"/><path d="M14 11v6"/>
+                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+            </button>
+          </article>
+
+          <article class="cart-item">
+            <div class="cart-item__thumb">
+              <img src="./assets/img/3.jpg" alt="Blonde album artwork" width="72" height="72" loading="lazy" />
+            </div>
+            <div class="cart-item__info">
+              <p class="cart-item__title">Blonde</p>
+              <p class="cart-item__artist">Frank Ocean</p>
+              <p class="cart-item__format">Digital MP3</p>
+            </div>
+            <div class="cart-item__qty" aria-label="Quantity">
+              <button class="cart-item__qty-btn" type="button" aria-label="Decrease quantity">&minus;</button>
+              <span class="cart-item__qty-num">1</span>
+              <button class="cart-item__qty-btn" type="button" aria-label="Increase quantity">+</button>
+            </div>
+            <span class="cart-item__price">$9.99</span>
+            <button class="cart-item__delete" type="button" aria-label="Remove Blonde from cart">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                <path d="M10 11v6"/><path d="M14 11v6"/>
+                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+            </button>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Order Summary -->
+      <aside class="order-summary" aria-label="Order summary">
+        <h2 class="order-summary__title">Order Summary</h2>
+
+        <div class="order-summary__lines">
+          <div class="order-summary__line">
+            <span class="order-summary__line-label">Subtotal</span>
+            <span class="order-summary__line-value">$22.98</span>
+          </div>
+          <div class="order-summary__line">
+            <span class="order-summary__line-label">Estimated Tax</span>
+            <span class="order-summary__line-value">$1.84</span>
+          </div>
+        </div>
+
+        <hr class="order-summary__divider" />
+
+        <div class="order-summary__total">
+          <span class="order-summary__total-label">Total</span>
+          <span class="order-summary__total-value">$24.82</span>
+        </div>
+
+        <a href="checkout.html" class="btn--checkout">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          Proceed to Checkout
+        </a>
+
+        <a href="index.html" class="order-summary__continue">Continue Shopping</a>
+      </aside>
+
+    </div>
+  </main>
+
+</body>
+</html>
