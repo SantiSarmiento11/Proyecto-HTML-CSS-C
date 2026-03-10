@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchase Successful — MusicStream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/views/checkout.css" />
+</head>
+
+<body class="success-page">
+
+  <!-- HEADER -->
+  <header class="header success-header" role="banner">
+    <a href="index.html" class="header__logo" aria-label="MusicStream Home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="6" width="3" height="12" rx="1.5" fill="#3b82f6"/>
+        <rect x="7" y="3" width="3" height="18" rx="1.5" fill="#3b82f6"/>
+        <rect x="12" y="1" width="3" height="22" rx="1.5" fill="#3b82f6"/>
+        <rect x="17" y="5" width="3" height="14" rx="1.5" fill="#3b82f6"/>
+      </svg>
+      <span class="header__logo-text">MusicStream</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="#" class="header__nav-link">Discover</a>
+      <a href="#" class="header__nav-link">Library</a>
+      <a href="index.html" class="header__nav-link">Store</a>
+    </nav>
+
+    <div class="header__search" role="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="header__search-icon" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="search" placeholder="Artists, albums, tracks" aria-label="Search" />
+    </div>
+
+    <a href="#" class="header__avatar" aria-label="User profile">
+      <img src="./assets/img/WhatsApp Image 2026-03-08 at 6.40.15 PM.jpeg" alt="User avatar" width="34" height="34" loading="lazy" />
+    </a>
+  </header>
+
+  <!-- SIDEBAR Mi Música -->
+  <aside class="success-sidebar" role="complementary" aria-label="My Music">
+    <p class="success-sidebar__label">My Music</p>
+    <nav class="success-sidebar__nav" aria-label="Library navigation">
+
+      <a href="#" class="success-sidebar__item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 3h18v18H3z"/><circle cx="12" cy="12" r="3"/>
+          <path d="M12 3v3m0 12v3M3 12h3m12 0h3"/>
+        </svg>
+        Recently Purchased
+      </a>
+
+      <a href="#" class="success-sidebar__item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        My Albums
+      </a>
+
+      <a href="#" class="success-sidebar__item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        Liked Songs
+      </a>
+
+    </nav>
+  </aside>
+
+  <!-- MAIN: tarjeta de confirmación -->
+  <main class="success-main" id="main-content">
+    <div class="success-card" role="region" aria-label="Purchase confirmation">
+
+      <!-- Ícono de check -->
+      <div class="success-card__icon" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <h1 class="success-card__title">Purchase Successful!</h1>
+
+      <p class="success-card__subtitle">
+        Thank you for your purchase. A confirmation email has been sent to your
+        registered address. You can now find your new music in your library.
+      </p>
+
+      <!-- Order Summary -->
+      <div class="success-order-summary" aria-label="Order details">
+        <h2 class="success-order-summary__title">Order Summary</h2>
+
+        <div class="success-order-item">
+          <div class="success-order-item__thumb">
+            <img src="./assets/img/4.jpg" alt="Solar Flare album cover" width="52" height="52" loading="lazy" />
+          </div>
+          <div class="success-order-item__info">
+            <p class="success-order-item__title">Solar Flare</p>
+            <p class="success-order-item__artist">The Wanderers</p>
+          </div>
+          <span class="success-order-item__price">$14.99</span>
+        </div>
+
+        <div class="success-order-meta">
+          <div class="success-order-meta__line success-order-meta__line--total">
+            <span class="success-order-meta__line-label">Total:</span>
+            <span class="success-order-meta__line-value">$14.99</span>
+          </div>
+          <div class="success-order-meta__line success-order-meta__line--id">
+            <span class="success-order-meta__line-label">Order ID:</span>
+            <span class="success-order-meta__line-value">#ABC-123-XYZ-456</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acciones -->
+      <div class="success-actions">
+        <button class="btn--secondary" type="button">View Order History</button>
+        <a href="index.html" class="btn--return">Return to Store</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
