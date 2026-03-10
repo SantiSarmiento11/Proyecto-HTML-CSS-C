@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Checkout — MusicStream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/views/checkout.css" />
+</head>
+
+<body class="checkout-page">
+
+  <!-- HEADER mínimo -->
+  <header class="header--checkout" role="banner">
+    <a href="index.html" class="header__logo" aria-label="MusicStream Home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="6" width="3" height="12" rx="1.5" fill="#3b82f6"/>
+        <rect x="7" y="3" width="3" height="18" rx="1.5" fill="#3b82f6"/>
+        <rect x="12" y="1" width="3" height="22" rx="1.5" fill="#3b82f6"/>
+        <rect x="17" y="5" width="3" height="14" rx="1.5" fill="#3b82f6"/>
+      </svg>
+      <span class="header__logo-text">MusicStream</span>
+    </a>
+    <a href="index.html" class="header__back-link">Back to Store</a>
+  </header>
+
+  <main class="checkout-main" id="main-content">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Checkout progress">
+      <a href="cart.html" class="breadcrumb__link">Cart</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current" aria-current="step">Payment</span>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__link" style="color: var(--text-muted)">Complete</span>
+    </nav>
+
+    <h1 class="page-title">Secure Checkout</h1>
+
+    <!-- Layout: formulario + resumen -->
+    <div class="checkout-layout">
+
+      <!-- Formulario de pago y dirección -->
+      <div>
+
+        <!-- Payment Method -->
+        <section class="checkout-section" aria-labelledby="payment-title">
+          <h2 class="checkout-section__title" id="payment-title">Payment Method</h2>
+
+          <div class="payment-header">
+            <span class="payment-header__label">Pay with Credit Card</span>
+            <div class="payment-header__cards" aria-label="Accepted cards">
+              <span class="payment-card-logo">VISA</span>
+              <span class="payment-card-logo">MC</span>
+              <span class="payment-card-logo">AMEX</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="card-number">Card Number</label>
+            <div class="form-input--icon-right">
+              <input
+                class="form-input"
+                type="text"
+                id="card-number"
+                placeholder="0000 0000 0000 0000"
+                maxlength="19"
+                inputmode="numeric"
+                autocomplete="cc-number"
+              />
+              <svg class="form-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="card-expiry">Expiration (MM/YY)</label>
+              <input class="form-input" type="text" id="card-expiry" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="card-cvc">CVC</label>
+              <div class="form-input--icon-right">
+                <input class="form-input" type="text" id="card-cvc" placeholder="123" maxlength="4" inputmode="numeric" autocomplete="cc-csc" />
+                <svg class="form-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="card-name">Name on Card</label>
+            <input class="form-input" type="text" id="card-name" placeholder="John Doe" autocomplete="cc-name" />
+          </div>
+        </section>
+
+        <!-- Billing Address -->
+        <section class="checkout-section" aria-labelledby="billing-title">
+          <h2 class="checkout-section__title" id="billing-title">Billing Address</h2>
+
+          <div class="form-group">
+            <label class="form-label" for="country">Country/Region</label>
+            <select class="form-select" id="country" autocomplete="country">
+              <option value="US">United States</option>
+              <option value="CO">Colombia</option>
+              <option value="MX">Mexico</option>
+              <option value="GB">United Kingdom</option>
+              <option value="CA">Canada</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="address">Street Address</label>
+            <input class="form-input" type="text" id="address" placeholder="123 Music Lane" autocomplete="street-address" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="city">City</label>
+              <input class="form-input" type="text" id="city" placeholder="Nashville" autocomplete="address-level2" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="state">State/Province</label>
+              <input class="form-input" type="text" id="state" placeholder="Tennessee" autocomplete="address-level1" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="postal">Postal Code</label>
+            <input class="form-input" type="text" id="postal" placeholder="37203" autocomplete="postal-code" inputmode="numeric" />
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Order Summary sidebar -->
+      <aside class="order-summary" aria-label="Order summary">
+        <h2 class="order-summary__title">Order Summary</h2>
+
+        <!-- Items a pagar -->
+        <div class="order-summary__items">
+          <div class="order-summary__item">
+            <div class="order-summary__item-thumb">
+              <img src="./assets/img/2.jpg" alt="Chromatic Echoes" width="52" height="52" loading="lazy" />
+            </div>
+            <div class="order-summary__item-info">
+              <p class="order-summary__item-title">Chromatic Echoes</p>
+              <p class="order-summary__item-artist">By The Lumineers</p>
+            </div>
+            <span class="order-summary__item-price">$12.99</span>
+          </div>
+
+          <div class="order-summary__item">
+            <div class="order-summary__item-thumb">
+              <img src="./assets/img/3.jpg" alt="Neon Dreams" width="52" height="52" loading="lazy" />
+            </div>
+            <div class="order-summary__item-info">
+              <p class="order-summary__item-title">Neon Dreams</p>
+              <p class="order-summary__item-artist">By Synthwave Collective</p>
+            </div>
+            <span class="order-summary__item-price">$9.99</span>
+          </div>
+        </div>
+
+        <!-- Totales -->
+        <div class="order-summary__lines">
+          <div class="order-summary__line">
+            <span class="order-summary__line-label">Subtotal</span>
+            <span class="order-summary__line-value">$22.98</span>
+          </div>
+          <div class="order-summary__line">
+            <span class="order-summary__line-label">Taxes</span>
+            <span class="order-summary__line-value">$1.84</span>
+          </div>
+        </div>
+
+        <hr class="order-summary__divider" />
+
+        <div class="order-summary__total">
+          <span class="order-summary__total-label">Total</span>
+          <span class="order-summary__total-value">$24.82</span>
+        </div>
+
+        <a href="success.html" class="btn--place-order">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          Place Order &amp; Pay $24.82
+        </a>
+
+        <p class="order-legal">
+          By placing this order, you agree to our
+          <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </p>
+      </aside>
+
+    </div>
+  </main>
+
+</body>
+</html>
