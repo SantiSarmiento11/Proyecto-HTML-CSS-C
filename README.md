@@ -182,6 +182,6 @@ Ejemplo: `feat: agregar vista de detalle de álbum con tracklist`
 El desarrollo está GitHub con las siguientes ramas:
 
 - `main` — versión estable y entregable
-- `DevSantiago` — Dev1 Santiago - SantiSarmiento11
-- `DevJonatan` — Dev2 Jonatan - Jonatan-17
-- `DevFabio` — Dev3 Fabio - Fcnfabio
+- `DevSantiago` — Dev1 Santiago - @SantiSarmiento11 (GitHub)
+- `DevJonatan` — Dev2 Jonatan - @Jonatan-17 (GitHub)
+- `DevFabio` — Dev3 Fabio - @Fcnfabio (GitHub)
