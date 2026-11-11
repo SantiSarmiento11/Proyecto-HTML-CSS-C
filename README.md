@@ -61,3 +61,7 @@ Proyecto-HTML-CSS-C/
     ├── components.css   # Botones, badges, tarjetas de producto y reproductores
     └── views/           # Reglas especificas por cada vista individual
 ```
+
+## Stack Tecnologico
+
+Construido exclusivamente con estandares web oficiales del W3C para garantizar rendimiento maximo, mantenibilidad y accesibilidad universal.
