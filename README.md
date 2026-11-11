@@ -180,3 +180,9 @@ En la vista de facturacion (`checkout.html`), se utilizan atributos nativos de H
 
 - Las imagenes cuentan con valores `alt` descriptivos y dimensiones `width` y `height` predefinidas para prevenir saltos de diseno durante la carga (Cumulative Layout Shift - CLS).
 - Si un recurso de imagen falla, las cajas contenedoras mantienen la relacion de aspecto (`aspect-ratio: 1/1`) con fondos degradados neutros.
+
+## Estrategia de Pruebas y Aseguramiento de Calidad
+
+- Verificacion de validacion de marcado estandar en el validador oficial del W3C.
+- Pruebas de compatibilidad responsive en resoluciones estandar (360px, 768px, 1024px, 1440px, 1920px).
+- Auditoria de rendimiento y mejores practicas con Google Lighthouse.
