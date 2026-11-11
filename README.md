@@ -216,3 +216,11 @@ El diseno esta optimizado para cumplir con las mejores metricas de Google Web Vi
 
 - Utilizacion de `content-visibility: auto` en secciones extensas del catalogo para evitar renderizado innecesario fuera de la pantalla visible.
 - Declaracion de fuentes con `font-display: swap` para eliminar bloqueos de texto durante la descarga.
+
+## Matriz de Resolucion de Incidencias
+
+| Problema Frecuente | Origen | Accion Correctiva |
+| :--- | :--- | :--- |
+| Las fuentes Space Grotesk no se visualizan | Sin conexion a Internet al servidor de Google Fonts | Comprobar conexion a red o descargar las fuentes e incluirlas localmente mediante `@font-face`. |
+| Imagenes se ven desproporcionadas en navegadores antiguos | Falta de soporte de `aspect-ratio` | Las reglas incluyen fallbacks tradicionales con tecnicas de padding porcentual (`padding-top: 100%`). |
+| La grilla colapsa en pantallas moviles estrechas | Configuracion de columnas rigidas | Revisar que la definicion use `grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))`. |
