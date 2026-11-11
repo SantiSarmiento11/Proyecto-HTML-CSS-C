@@ -91,3 +91,22 @@ Construido exclusivamente con estandares web oficiales del W3C para garantizar r
   - Safari 11+
   - Edge 79+
 - No se requiere instalacion de Node.js, Python ni compiladores adicionales para su visualizacion basica.
+
+### Sistema de Variables de Diseno (Tokens CSS)
+
+El archivo `css/main.css` define los tokens centrales del sistema de diseno:
+
+```css
+:root {
+  --color-bg-primary: #0a0b0e;
+  --color-bg-surface: #14161d;
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-display: 'Space Grotesk', sans-serif;
+  --border-radius-base: 12px;
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+```
