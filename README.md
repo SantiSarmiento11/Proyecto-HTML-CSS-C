@@ -82,3 +82,12 @@ Construido exclusivamente con estandares web oficiales del W3C para garantizar r
 
 - **Imagenes AVIF / WebP**: Compresion de ultima generacion reduciendo el peso de transferencia en mas de un 60% frente a JPEG/PNG tradicionales.
 - **Google Fonts CDN**: Enlace optimizado con preconeccion anticipada (`rel='preconnect'`).
+
+## Requisitos Previos del Sistema
+
+- Cualquier navegador web con soporte de CSS Grid y CSS Variables:
+  - Chrome 60+
+  - Firefox 55+
+  - Safari 11+
+  - Edge 79+
+- No se requiere instalacion de Node.js, Python ni compiladores adicionales para su visualizacion basica.
