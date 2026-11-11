@@ -10,3 +10,11 @@ Interfaz web moderna y adaptativa para la exploracion de catalogo musical, adqui
 ## Resumen Ejecutivo
 
 El diseno de plataformas digitales para la industria musical requiere un balance riguroso entre estetica vanguardista, rendimiento optimo y jerarquia visual intuitiva. MusicStream Store ofrece una arquitectura de interfaz limpia que simula la experiencia completa de una tienda de musica: desde el descubrimiento de lanzamientos discograficos, visualizacion de pistas y fichas tecnicas de masterizacion, hasta el flujo de carrito de compras, pasarela de pago y reproductor embebido.
+
+## Alcance y Objetivos de Negocio
+
+- Arquitectura de interfaz orientada a componentes modulares utilizando CSS nativo sin dependencias de frameworks externos.
+- Diseno adaptativo (Mobile-First y Desktop) con soporte para altas densidades de pixeles.
+- Flujo transaccional completo: Catalogo -> Detalle de Album -> Carrito de Compras -> Checkout -> Confirmacion de Compra.
+- Reproductor multimedia estilizado con controles de reproduccion, barra de progreso y lista de canciones.
+- Optimizacion estricta de tiempos de carga y compatibilidad semantica accesible.
