@@ -27,3 +27,16 @@ El proyecto implementa una arquitectura basada en la metodologia de organizacion
 3. Capa de Componentes Reutilizables (`css/components.css`).
 4. Capa de Vistas Especificas (`css/views/*.css`).
 5. Paginas HTML interconectadas mediante hiperenlaces semanticos.
+
+### Diagrama de Flujo Arquitectonico y Navegacion
+
+```mermaid
+flowchart TD
+    A[Pagina Principal / Tienda index.html] -->|Seleccionar Album| B[Detalle de Album album-detail.html]
+    A -->|Reproducir Track| C[Reproductor de Musica player.html]
+    B -->|Agregar al Carrito| D[Carrito de Compras cart.html]
+    D -->|Proceder al Pago| E[Pasarela de Pago checkout.html]
+    E -->|Confirmar Transaccion| F[Confirmacion Exitosa success.html]
+    C -->|Volver a la Tienda| A
+    F -->|Continuar Explorando| A
+```
