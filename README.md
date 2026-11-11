@@ -206,3 +206,8 @@ El diseno esta optimizado para cumplir con las mejores metricas de Google Web Vi
 
 - Los formularios de captura de credenciales y pagos cuentan con directivas `autocomplete` apropiadas y estan listos para envio exclusivo sobre protocolos cifrados HTTPS.
 - Recursos externos enlazados con directivas `rel="noopener noreferrer"` para evitar vulnerabilidades de manipulacion de ventana (`window.opener`).
+
+## Despliegue y Distribucion en Produccion
+
+- Almacenamiento en servicios estaticos globales (Cloudflare Pages, AWS S3 + CloudFront, Vercel).
+- Activacion de cabeceras de cache HTTP agresivas (`Cache-Control: public, max-age=31536000`) para hojas de estilo e imagenes inmutables.
