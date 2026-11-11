@@ -70,3 +70,10 @@ Construido exclusivamente con estandares web oficiales del W3C para garantizar r
 
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) Estandar semantico oficial (W3C Semantic Elements: header, main, nav, section, article, aside, footer).
 - ![Web Accessibility](https://img.shields.io/badge/Accessibility-WAI--ARIA-blue.svg?style=for-the-badge) Atributos accesibles y roles semanticos para tecnologias asistivas.
+
+### Diseno Visual, Tipografia y Maquetacion
+
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) Sistema de estilos nativo con Custom Properties y selectores avanzados.
+- ![CSS Grid](https://img.shields.io/badge/CSS_Grid_Layout-264DE4?style=for-the-badge&logo=css3&logoColor=white) Distribucion bidimensional para el dashboard de tienda y paneles laterales.
+- ![CSS Flexbox](https://img.shields.io/badge/CSS_Flexbox-1572B6?style=for-the-badge&logo=css3&logoColor=white) Alineacion unidimensional para barras de navegacion, listas de reproduccion y tarjetas.
+- ![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white) Fuentes tipograficas Inter (lectura fluida) y Space Grotesk (titulares).
