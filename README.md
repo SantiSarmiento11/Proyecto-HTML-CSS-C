@@ -18,3 +18,12 @@ El diseno de plataformas digitales para la industria musical requiere un balance
 - Flujo transaccional completo: Catalogo -> Detalle de Album -> Carrito de Compras -> Checkout -> Confirmacion de Compra.
 - Reproductor multimedia estilizado con controles de reproduccion, barra de progreso y lista de canciones.
 - Optimizacion estricta de tiempos de carga y compatibilidad semantica accesible.
+
+## Arquitectura del Sistema
+
+El proyecto implementa una arquitectura basada en la metodologia de organizacion modular de estilos y paginas estaticas:
+1. Capa de Base y Variables Globales (`css/main.css`).
+2. Capa de Estructura y Distribucion de Grid (`css/layout.css`).
+3. Capa de Componentes Reutilizables (`css/components.css`).
+4. Capa de Vistas Especificas (`css/views/*.css`).
+5. Paginas HTML interconectadas mediante hiperenlaces semanticos.
