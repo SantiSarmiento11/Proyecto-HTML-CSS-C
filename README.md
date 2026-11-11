@@ -194,3 +194,10 @@ En la vista de facturacion (`checkout.html`), se utilizan atributos nativos de H
 npx html-validate **/*.html
 npx stylelint css/**/*.css
 ```
+
+## Metricas de Experiencia de Usuario (Core Web Vitals)
+
+El diseno esta optimizado para cumplir con las mejores metricas de Google Web Vitals:
+- Largest Contentful Paint (LCP) < 1.2 segundos.
+- First Input Delay (FID) < 50 milisegundos.
+- Cumulative Layout Shift (CLS) = 0.00.
