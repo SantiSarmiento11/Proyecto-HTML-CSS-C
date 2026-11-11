@@ -110,3 +110,13 @@ El archivo `css/main.css` define los tokens centrales del sistema de diseno:
   --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 ```
+
+## Guia de Instalacion y Despliegue Local
+
+1. Clonar el repositorio en su estacion de trabajo:
+```bash
+git clone https://github.com/SantiSarmiento11/Proyecto-HTML-CSS-C.git
+cd Proyecto-HTML-CSS-C
+```
+
+2. Abrir directamente en su navegador web o servir mediante un servidor HTTP local.
