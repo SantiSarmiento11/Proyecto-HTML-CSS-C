@@ -150,3 +150,10 @@ El recorrido del usuario a traves de la plataforma incluye:
 2. Visualizacion de detalles en `album-detail.html`: consulta de productores, formatos disponibles (Vinilo, CD, FLAC Digital) y listado de temas.
 3. Experiencia auditiva en `player.html`: reproductor interactivo con controles de avance y visualizador de onda sonora.
 4. Compra y facturacion: agregacion al carrito (`cart.html`), formulario seguro (`checkout.html`) y confirmacion de pedido (`success.html`).
+
+### Vistas y Funcionalidades de Usuario
+
+- **Store View**: Grilla responsiva de productos con animaciones al pasar el cursor (hover transform).
+- **Product Sheet**: Ficha tecnica con metadatos de masterizacion y ficha de coleccionista.
+- **Shopping Bag**: Tabla resumen de articulos, costos de envio e impuestos calculados.
+- **Checkout Stepper**: Formulario estructurado para validacion de metodos de pago y direccion de despacho.
