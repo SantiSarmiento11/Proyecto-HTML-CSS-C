@@ -175,3 +175,8 @@ En la vista de facturacion (`checkout.html`), se utilizan atributos nativos de H
 | `cart.html` | Gestion de ordenes en curso | `css/views/cart.css` |
 | `checkout.html` | Formulario de pago y facturacion | `css/views/checkout.css` |
 | `success.html` | Pantalla de confirmacion de orden | `css/views/success.css` |
+
+### Resiliencia y Comportamiento Adaptativo
+
+- Las imagenes cuentan con valores `alt` descriptivos y dimensiones `width` y `height` predefinidas para prevenir saltos de diseno durante la carga (Cumulative Layout Shift - CLS).
+- Si un recurso de imagen falla, las cajas contenedoras mantienen la relacion de aspecto (`aspect-ratio: 1/1`) con fondos degradados neutros.
