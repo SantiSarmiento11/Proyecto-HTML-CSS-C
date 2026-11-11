@@ -120,3 +120,13 @@ cd Proyecto-HTML-CSS-C
 ```
 
 2. Abrir directamente en su navegador web o servir mediante un servidor HTTP local.
+
+### Comprobacion de Archivos y Recursos Estaticos
+
+Verificar que las carpetas de recursos y estilos esten intactas:
+```bash
+# Listado de componentes CSS
+ls -l css/
+# Listado de imagenes multimedia
+ls -l assets/img/
+```
