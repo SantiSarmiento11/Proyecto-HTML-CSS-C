@@ -224,3 +224,10 @@ El diseno esta optimizado para cumplir con las mejores metricas de Google Web Vi
 | Las fuentes Space Grotesk no se visualizan | Sin conexion a Internet al servidor de Google Fonts | Comprobar conexion a red o descargar las fuentes e incluirlas localmente mediante `@font-face`. |
 | Imagenes se ven desproporcionadas en navegadores antiguos | Falta de soporte de `aspect-ratio` | Las reglas incluyen fallbacks tradicionales con tecnicas de padding porcentual (`padding-top: 100%`). |
 | La grilla colapsa en pantallas moviles estrechas | Configuracion de columnas rigidas | Revisar que la definicion use `grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))`. |
+
+## Guia de Contribucion
+
+1. Realizar un Fork del proyecto.
+2. Crear una rama de funcionalidad (`git checkout -b feature/nuevo-reproductor`).
+3. Confirmar cambios con Conventional Commits (`git commit -m 'feat: adicionar visualizador de ecualizador CSS'`).
+4. Realizar push a la rama y abrir un Pull Request con revision de maquetacion.
