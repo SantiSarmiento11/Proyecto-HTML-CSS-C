@@ -130,3 +130,15 @@ ls -l css/
 # Listado de imagenes multimedia
 ls -l assets/img/
 ```
+
+### Ejecucion en Servidor de Desarrollo Local
+
+Para emular el comportamiento de un servidor web en produccion:
+```bash
+# Opcion 1: Servidor ligero con Python
+python -m http.server 8080
+
+# Opcion 2: Extension Live Server de VS Code (Clic derecho en index.html -> 'Open with Live Server')
+```
+
+Acceso inmediato en el navegador: `http://localhost:8080`
