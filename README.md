@@ -65,3 +65,8 @@ Proyecto-HTML-CSS-C/
 ## Stack Tecnologico
 
 Construido exclusivamente con estandares web oficiales del W3C para garantizar rendimiento maximo, mantenibilidad y accesibilidad universal.
+
+### Estandares de Marcado y Estructuracion
+
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) Estandar semantico oficial (W3C Semantic Elements: header, main, nav, section, article, aside, footer).
+- ![Web Accessibility](https://img.shields.io/badge/Accessibility-WAI--ARIA-blue.svg?style=for-the-badge) Atributos accesibles y roles semanticos para tecnologias asistivas.
