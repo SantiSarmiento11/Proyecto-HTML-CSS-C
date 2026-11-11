@@ -211,3 +211,8 @@ El diseno esta optimizado para cumplir con las mejores metricas de Google Web Vi
 
 - Almacenamiento en servicios estaticos globales (Cloudflare Pages, AWS S3 + CloudFront, Vercel).
 - Activacion de cabeceras de cache HTTP agresivas (`Cache-Control: public, max-age=31536000`) para hojas de estilo e imagenes inmutables.
+
+## Optimizacion de Rendimiento de Carga
+
+- Utilizacion de `content-visibility: auto` en secciones extensas del catalogo para evitar renderizado innecesario fuera de la pantalla visible.
+- Declaracion de fuentes con `font-display: swap` para eliminar bloqueos de texto durante la descarga.
