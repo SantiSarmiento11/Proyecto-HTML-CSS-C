@@ -231,3 +231,7 @@ El diseno esta optimizado para cumplir con las mejores metricas de Google Web Vi
 2. Crear una rama de funcionalidad (`git checkout -b feature/nuevo-reproductor`).
 3. Confirmar cambios con Conventional Commits (`git commit -m 'feat: adicionar visualizador de ecualizador CSS'`).
 4. Realizar push a la rama y abrir un Pull Request con revision de maquetacion.
+
+## Autoria y Creditos del Proyecto
+
+Disenado y estructurado por [Santiago Sarmiento](https://github.com/SantiSarmiento11) como demostracion de dominio de maquetacion web avanzada y arquitectura CSS moderna.
