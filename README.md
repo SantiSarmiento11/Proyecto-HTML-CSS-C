@@ -157,3 +157,10 @@ El recorrido del usuario a traves de la plataforma incluye:
 - **Product Sheet**: Ficha tecnica con metadatos de masterizacion y ficha de coleccionista.
 - **Shopping Bag**: Tabla resumen de articulos, costos de envio e impuestos calculados.
 - **Checkout Stepper**: Formulario estructurado para validacion de metodos de pago y direccion de despacho.
+
+### Validaciones de Entrada de Formularios
+
+En la vista de facturacion (`checkout.html`), se utilizan atributos nativos de HTML5 para validacion robusta sin JavaScript intrusivo:
+- `required`: Campos obligatorios de tarjeta y direccion.
+- `pattern`: Validacion de formatos de codigo postal y digitos de seguridad CVV.
+- `autocomplete`: Integracion fluida con gestores de contraseñas y autocompletado del navegador.
