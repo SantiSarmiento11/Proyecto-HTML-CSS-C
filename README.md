@@ -201,3 +201,8 @@ El diseno esta optimizado para cumplir con las mejores metricas de Google Web Vi
 - Largest Contentful Paint (LCP) < 1.2 segundos.
 - First Input Delay (FID) < 50 milisegundos.
 - Cumulative Layout Shift (CLS) = 0.00.
+
+## Consideraciones de Seguridad en Frontend
+
+- Los formularios de captura de credenciales y pagos cuentan con directivas `autocomplete` apropiadas y estan listos para envio exclusivo sobre protocolos cifrados HTTPS.
+- Recursos externos enlazados con directivas `rel="noopener noreferrer"` para evitar vulnerabilidades de manipulacion de ventana (`window.opener`).
