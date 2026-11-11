@@ -77,3 +77,8 @@ Construido exclusivamente con estandares web oficiales del W3C para garantizar r
 - ![CSS Grid](https://img.shields.io/badge/CSS_Grid_Layout-264DE4?style=for-the-badge&logo=css3&logoColor=white) Distribucion bidimensional para el dashboard de tienda y paneles laterales.
 - ![CSS Flexbox](https://img.shields.io/badge/CSS_Flexbox-1572B6?style=for-the-badge&logo=css3&logoColor=white) Alineacion unidimensional para barras de navegacion, listas de reproduccion y tarjetas.
 - ![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white) Fuentes tipograficas Inter (lectura fluida) y Space Grotesk (titulares).
+
+### Formatos Multimedia y Optimizacion de Recursos
+
+- **Imagenes AVIF / WebP**: Compresion de ultima generacion reduciendo el peso de transferencia en mas de un 60% frente a JPEG/PNG tradicionales.
+- **Google Fonts CDN**: Enlace optimizado con preconeccion anticipada (`rel='preconnect'`).
