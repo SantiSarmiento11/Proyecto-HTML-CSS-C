@@ -164,3 +164,14 @@ En la vista de facturacion (`checkout.html`), se utilizan atributos nativos de H
 - `required`: Campos obligatorios de tarjeta y direccion.
 - `pattern`: Validacion de formatos de codigo postal y digitos de seguridad CVV.
 - `autocomplete`: Integracion fluida con gestores de contraseñas y autocompletado del navegador.
+
+### Matriz de Vistas y Enlaces Internos
+
+| Archivo HTML | Rol Funcional | Hoja de Estilos Primaria |
+| :--- | :--- | :--- |
+| `index.html` | Portal de inicio y catalogo de discos | `css/views/store.css` |
+| `album-detail.html` | Ficha en profundidad del album | `css/views/detail.css` |
+| `player.html` | Consola de reproduccion musical | `css/views/player.css` |
+| `cart.html` | Gestion de ordenes en curso | `css/views/cart.css` |
+| `checkout.html` | Formulario de pago y facturacion | `css/views/checkout.css` |
+| `success.html` | Pantalla de confirmacion de orden | `css/views/success.css` |
