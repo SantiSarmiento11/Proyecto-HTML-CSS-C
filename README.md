@@ -142,3 +142,11 @@ python -m http.server 8080
 ```
 
 Acceso inmediato en el navegador: `http://localhost:8080`
+
+## Funcionamiento del Sistema
+
+El recorrido del usuario a traves de la plataforma incluye:
+1. Acceso al catalogo en `index.html`: exploracion de portadas, novedades y generos musicales.
+2. Visualizacion de detalles en `album-detail.html`: consulta de productores, formatos disponibles (Vinilo, CD, FLAC Digital) y listado de temas.
+3. Experiencia auditiva en `player.html`: reproductor interactivo con controles de avance y visualizador de onda sonora.
+4. Compra y facturacion: agregacion al carrito (`cart.html`), formulario seguro (`checkout.html`) y confirmacion de pedido (`success.html`).
