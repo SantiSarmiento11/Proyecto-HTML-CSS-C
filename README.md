@@ -40,3 +40,24 @@ flowchart TD
     C -->|Volver a la Tienda| A
     F -->|Continuar Explorando| A
 ```
+
+### Estructura de Directorios
+
+```text
+Proyecto-HTML-CSS-C/
+├── index.html           # Vista principal de la tienda y catalogo discografico
+├── album-detail.html    # Ficha tecnica del album, tracklist y opciones de compra
+├── player.html          # Interfaz dedicada del reproductor de audio digital
+├── cart.html            # Resumen del carrito de compras y calculo de subtotal
+├── checkout.html        # Formulario de direccion de envio y datos de pago
+├── success.html         # Pantalla de confirmacion de orden con resumen de compra
+├── README.md            # Documentacion tecnica de ingenieria del proyecto
+├── assets/              # Recursos multimedia
+│   ├── icons/           # Iconografia vectorial y logos de alta resolucion
+│   └── img/             # Portadas de albumes y recursos graficos en WebP/AVIF
+└── css/                 # Hojas de estilo estructuradas en capas
+    ├── main.css         # Reset CSS, variables CSS y tipografias globales
+    ├── layout.css       # Sistema de grillas (Header, Sidebar, Main, Footer)
+    ├── components.css   # Botones, badges, tarjetas de producto y reproductores
+    └── views/           # Reglas especificas por cada vista individual
+```
